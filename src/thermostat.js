@@ -12,11 +12,17 @@ Thermostat.prototype = {
   if(this.PowerSavingMode == true && this.temp >= this.maxTemperature){
     throw('Sorry maximum temperature reached')
   }
+
+  if(this.PowerSavingMode == false && this.temp >= 32){
+    throw('Sorry power saving mode on')
+  }
+
   try{
       return ++this.temp;
    }
    catch(err){
        this.temp = this.maxTemperature;
+       this.temp = 32;
    }
   },
 

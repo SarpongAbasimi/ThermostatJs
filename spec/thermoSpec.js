@@ -64,6 +64,14 @@ describe('Thermostat', function(){
      thermostat.switchPowerSaver()
      expect(thermostat.PowerSavingMode).toBe(false);
     });
+
+    it('turns power saving mode on or off', function(){
+      thermostat.switchPowerSaver()
+      for(let i = 1; i < 13; i++){
+        thermostat.increment();
+      }
+      expect(function(){thermostat.increment()}).toThrow('Sorry power saving mode on');
+    });
   });
 
   describe('reset', function(){
