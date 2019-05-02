@@ -18,11 +18,11 @@ Thermostat.prototype = {
   }
 
   try{
-      return ++this.temp;
+    return ++this.temp;
    }
    catch(err){
-       this.temp = this.maxTemperature;
-       this.temp = 32;
+    this.temp = this.maxTemperature;
+    this.temp = 32;
    }
   },
 
@@ -41,15 +41,15 @@ Thermostat.prototype = {
   switchPowerSaver: function(){
     let result = this.PowerSavingMode
     switch (result) {
-        case true:
+      case true:
         this.maxTemperature = 32;
         return this.PowerSavingMode =false;
-            break;
+          break;
         default:
         this.temp = 25;
         this.maxTemperature = 25;
         return this.PowerSavingMode = true;
-            break;
+          break;
     }
   },
 
@@ -60,14 +60,14 @@ Thermostat.prototype = {
   currentUsage: function(){
     let currentTemperature = this.temp
     switch (true ) {
-        case currentTemperature < 18:
-          return('low-usage');
-            break;
-        case currentTemperature < 25:
-          return('medium-usage');
-        default:
-          return('high-usage');
-            break;
+      case currentTemperature < 18:
+        return('low-usage');
+          break;
+      case currentTemperature < 25:
+        return('medium-usage');
+      default:
+        return('high-usage');
+          break;
     }
   }
 
