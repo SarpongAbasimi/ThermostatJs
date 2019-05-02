@@ -14,7 +14,7 @@ Thermostat.prototype = {
   }
 
   if(this.PowerSavingMode == false && this.temp >= 32){
-    throw('Sorry power saving mode on')
+    throw('Sorry maximum temperature is 32 degrees')
   }
 
   try{
@@ -46,14 +46,31 @@ Thermostat.prototype = {
         return this.PowerSavingMode =false;
             break;
         default:
+        this.temp = 25;
         this.maxTemperature = 25;
         return this.PowerSavingMode = true;
             break;
     }
   },
+
   reset: function(){
     return this.temp = 20;
+  },
+
+  currentUsage: function(){
+    let currentTemperature = this.temp
+    switch (true ) {
+        case currentTemperature < 18:
+          return('low-usage');
+            break;
+        case currentTemperature < 25:
+          return('medium-usage');
+        default:
+          return('high-usage');
+            break;
+    }
   }
+
 }
 
 module.exports = Thermostat;
