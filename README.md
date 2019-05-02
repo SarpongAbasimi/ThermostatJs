@@ -5,13 +5,14 @@ Makers Thermostat Challenge Week 5.
 <h4 align='center'>
 To Use App
 </h4>
-- ``Fork and clone`` this repo.
-- Cd into ``ThermostatJs``.
-- To run test type ``npm test``.
-- To feature test, cd into ``src``.
-- Copy code.
-- ``open chrome dev tools`` and paste code in there.
-- Create a new Thermostat object.
+
+-  ``Fork and clone`` this repo.
+-  Cd into ``ThermostatJs``.
+-  To run test type ``npm test``.
+-  To feature test, cd into ``src``.
+-  Copy code.
+-  ``open chrome dev tools`` and paste code in there.
+-  Create a new Thermostat object.
 
 <img width="581" alt="Screen Shot 2019-05-02 at 21 28 23" src="https://user-images.githubusercontent.com/37377831/57104858-4f1a9000-6d21-11e9-9781-306435b96a6b.png">
 
