@@ -49,5 +49,20 @@ $(document).ready(function(){
     thermostat.reset()
     $('#currentTemperature').html(thermostat.temp);
   });
+  $('#select-city').submit((event)=>{
+    event.preventDefault();
+    let apiKey ='bba53355256cc5e80941f166b19aa970';
+    let userInput = $('#userQuery').val();
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${apiKey}`)
+    .then((response)=>{
+      if(response.ok){
+        return(response.json())
+      }
+      throw new Error('Request failed')
+    }, networkError => newtworkError.message)
+    .then(resjonResponse => {
+      console.log(resjonResponse)
+    })
+  });
 });
 

@@ -18,8 +18,8 @@ body{
 
 #display-temperature{
   margin: 0 auto;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   text-align: center;
   padding: 50px;
   border-radius: 50%;
@@ -36,6 +36,11 @@ body{
   transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+#form-holder{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
 
 .fas:hover{
   opacity: 0.6;
