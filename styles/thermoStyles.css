@@ -4,6 +4,31 @@
   padding: 0;
 }
 
+:root{
+  --padding: 10px;
+}
+
 body{
   background-color: #63A9D2;
 }
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container .up{
+  padding: var(--padding);
+}
+.flex-container .down{
+  padding: var(--padding);
+}
+
+.flex-container .powerSaver{
+  padding: var(--padding)
+}
+
+.flex-container .reset{
+  padding: var(--padding);
+}
+
