@@ -66,7 +66,7 @@ To Use App.
 
 
 <h4 align='center'>
-Next Step Thermostat Interface. (In progress)
+Next Step Thermostat Interface (In progress).
 </h4>
 
 
