@@ -9,7 +9,49 @@
 }
 
 body{
-  background-color: #63A9D2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.thermo-container{
+  padding: 40px;
+}
+
+#display-temperature{
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 50%;
+}
+
+#display-temperature #currentTemperature{
+  color: #2F2F2F;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+}
+
+.fas{
+  font-size: 20px;
+  transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.fas:hover{
+  opacity: 0.6;
+  color: red;
+}
+
+
+.info-container{
+
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+li{
+  list-style-type: none;
 }
 
 .flex-container{
@@ -31,4 +73,5 @@ body{
 .flex-container .reset{
   padding: var(--padding);
 }
+
 

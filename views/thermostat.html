@@ -6,33 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="../styles/thermoStyles.css">
   <title>Thermostat</title>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container thermo-container">
     <div id='display-temperature'>
-      <h1>temperature</h1>
+      <h1 id='currentTemperature'></h1>
     </div>
   </div>
 
   <div class="container">
+      <div class="info-container">
+          <ul>
+            <li>
+             Status <span id='currentUsage' class="badge badge-success"></span>
+            </li>
+            <li>
+            Power Save Mode <span id='generalInfo' class="badge badge-info"></span>
+            </li>
+          </ul>
+      </div>
+  </div>
+  <div class="container">
     <div class="flex-container">
       <div class="up">
-        <i class="fas fa-chevron-up"></i>
+        <i id='increase'class="fas fa-chevron-up"></i>
       </div>
       <div class="down">
-        <i class="fas fa-chevron-down"></i>
+        <i id='decrease' class="fas fa-chevron-down"></i>
       </div>
       <div class="powerSaver">
-        <i class="fas fa-power-off"></i>
+        <i id='powerSaver' class="fas fa-power-off"></i>
       </div>
       <div class="reset">
-        <i class="fas fa-undo"></i>
+        <i id='reset' class="fas fa-undo"></i>
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="../src/dynamic.js"></script>
   <script src="../src/thermostat.js"></script>
 </body>
 </html>

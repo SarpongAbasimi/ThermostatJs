@@ -73,5 +73,5 @@ Thermostat.prototype = {
 
 }
 
-module.exports = Thermostat;
+//module.exports = Thermostat;
 
