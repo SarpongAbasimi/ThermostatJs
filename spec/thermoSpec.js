@@ -5,7 +5,7 @@ describe('Thermostat', function(){
   var thermostat;
 
   beforeEach(function(){
-      thermostat = new Thermostat();
+    thermostat = new Thermostat();
   });
 
   describe('it defualt at 20', function(){
@@ -42,7 +42,7 @@ describe('Thermostat', function(){
 
     it('It throws an error when minTemp reached', function(){
       for(let i = 1; i < 11 ; i++){
-         thermostat.decrement();
+        thermostat.decrement();
       }
       expect(function(){ thermostat.decrement() }).toThrow('Sorry minimum temperature reached.');
     });
@@ -69,7 +69,7 @@ describe('Thermostat', function(){
       thermostat.switchPowerSaver()
       for(let i = 1; i < 13; i++){
         thermostat.increment();
-      }
+      };
       expect(function(){thermostat.increment()}).toThrow('Sorry maximum temperature is 32 degrees');
     });
   });
@@ -80,13 +80,13 @@ describe('Thermostat', function(){
       thermostat.reset()
       expect(thermostat.temp).toBe(20);
     });
-  })
+  });
 
   describe('currentUsage', function(){
     it('returns low-usage if temperature is less than 18', function(){
       for(let i = 1; i < 10; i++){
         thermostat.decrement()
-      }
+      };
       expect(thermostat.currentUsage()).toEqual('low-usage');
     });
 
@@ -98,9 +98,8 @@ describe('Thermostat', function(){
       thermostat.switchPowerSaver()
       for(let i = 1; i < 10; i++){
         thermostat.increment()
-      }
+      };
       expect(thermostat.currentUsage()).toEqual('high-usage');
     });
   });
-
 });
