@@ -71,6 +71,9 @@ Next Step Thermostat Interface.
 
 ```
 This is how the application currently looks, I am really proud of it but at the same time, I am sure it could be inpoved to make it better.
+The application is not currently finished, I have one more user story to complete which I will do in the future.
+
+One of the cool things I learned was using ES6 ``fetch`` to request data from an expternal api.
 ```
 - Desktop view.
 
@@ -91,4 +94,54 @@ This is the reason why when the application starts, it shows the current
 temperature and weather conditions in London.
 ```
 
+- Users can also ask the application for the weather conditions for any city.
 
+<img width="438" alt="Screen Shot 2019-05-04 at 12 59 25" src="https://user-images.githubusercontent.com/37377831/57179563-05dc5480-6e77-11e9-99bf-b8f142e178e2.png">
+
+
+==================
+
+<h4 align='center'>
+  Problems Faced.
+</h4>
+
+```
+I decided to use npm to manage the dependencies for the application.
+I realised that whenever the application was run, chrome was giving me this error.
+```
+
+<img width="583" alt="Screen Shot 2019-05-04 at 13 16 04" src="https://user-images.githubusercontent.com/37377831/57179729-af701580-6e78-11e9-9f80-493f1c463e22.png">
+
+```
+After conducting a research, I read on blogs that node can't be run in the browser.
+This meant that I had to comment out the ``module.exports``` in order to get my application to work.
+```
+<img width="299" alt="Screen Shot 2019-05-04 at 13 14 48" src="https://user-images.githubusercontent.com/37377831/57179773-4e950d00-6e79-11e9-9fb4-bc03cc3a7a14.png">
+
+```
+So just incase you decide to run the application and it does not respond to
+the buttons on the UI , check to see if the the modules are being expoerted or commented out. I am hopping to fix this issue in the near future.
+```
+
+<h4 align='center'>
+Tech Stack Used.
+</h4>
+
+- JavaScript(ES5 & ES6).
+- Jasmine.
+- HTML 5.
+- CSS3
+- Bootstrap 4
+- jquery
+
+<h4 align='center'>
+What Did I Learn in week 5?
+</h4>
+
+- Domain modelling in JavaScript.
+- Encapsulation.
+- Ajax request cycle.
+- SRP.
+- Testing using Jasmine.
+- ES6 Fetch.
+- IIFE in JavaScript.
