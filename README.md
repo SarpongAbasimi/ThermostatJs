@@ -101,8 +101,6 @@ temperature and weather conditions in London.
 <img width="438" alt="Screen Shot 2019-05-04 at 12 59 25" src="https://user-images.githubusercontent.com/37377831/57179563-05dc5480-6e77-11e9-99bf-b8f142e178e2.png">
 
 
-==================
-
 <h4 align='center'>
   Problems Faced.
 </h4>
