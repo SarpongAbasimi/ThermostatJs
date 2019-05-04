@@ -66,8 +66,29 @@ To Use App.
 
 
 <h4 align='center'>
-Next Step Thermostat Interface (In progress).
+Next Step Thermostat Interface.
 </h4>
 
+```
+This is how the application currently looks, I am really proud of it but at the same time, I am sure it could be inpoved to make it better.
+```
+- Desktop view.
+
+<img width="1277" alt="Screen Shot 2019-05-04 at 12 58 39" src="https://user-images.githubusercontent.com/37377831/57179269-c2341b80-6e73-11e9-81e8-7352f7f2f457.png">
+
+- Mobile view.
+
+<img width="438" alt="Screen Shot 2019-05-04 at 12 58 58" src="https://user-images.githubusercontent.com/37377831/57179271-d710af00-6e73-11e9-8933-5b191ede4478.png">
+
+```
+When the application is started, it automatically fetches the current weather
+data from open weather app. This is done by using IFFE.
+```
+<img width="617" alt="Screen Shot 2019-05-04 at 13 56 50" src="https://user-images.githubusercontent.com/37377831/57179332-be54c900-6e74-11e9-81ef-851019176fd4.png">
+
+```
+This is the reason why when the application starts, it shows the current
+temperature and weather conditions in London.
+```
 
 
