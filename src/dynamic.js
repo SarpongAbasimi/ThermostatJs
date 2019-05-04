@@ -51,7 +51,7 @@ $(document).ready(function(){
 
   $('#decrease').on('click',()=>{
     thermostat.decrement()
-    $('#currentTemperature').html(thermostat.temp);
+    $('#currentTemperature').html(`${thermostat.temp}℃`);
     if(thermostat.currentUsage() == 'low-usage'){
       document.getElementById('currentUsage').innerHTML = thermostat.currentUsage();
     };
@@ -72,7 +72,7 @@ $(document).ready(function(){
       document.getElementById('generalInfo').innerHTML = ' On'
       document.getElementById('show-message').innerHTML = 'Maximum temperature is now 25℃'
     }
-    $('#currentTemperature').html(thermostat.temp);
+    $('#currentTemperature').html(`${thermostat.temp}℃`);
   });
 
   $('#currentUsage').html(thermostat.currentUsage())
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
   $('#reset').on('click',()=>{
     thermostat.reset()
-    $('#currentTemperature').html(thermostat.temp);
+    $('#currentTemperature').html(`${thermostat.temp}℃`);
   });
 
   $('#select-city').submit((event)=>{
