@@ -70,7 +70,9 @@ Next Step Thermostat Interface.
 </h4>
 
 ```
-This is how the application currently looks, I am really proud of it but at the same time, I am sure it could be improved to make it better.
+This is how the application currently looks, 
+I am really proud of it but at the same time, 
+I am sure it could be improved to make it better.
 The application is not currently finished, I have one more user story to complete,which I will do in the future.
 
 One of the cool things I learned was using ES6 ``fetch`` to request data from an expternal api.
@@ -107,20 +109,23 @@ temperature and weather conditions in London.
 
 ```
 I decided to use npm to manage the dependencies for the application.
-I realised that whenever the application was run, chrome was giving me this error.
+I realised that whenever the application was run,
+chrome was giving me this error.
 ```
 
 <img width="583" alt="Screen Shot 2019-05-04 at 13 16 04" src="https://user-images.githubusercontent.com/37377831/57179729-af701580-6e78-11e9-9f80-493f1c463e22.png">
 
 ```
 After conducting a research, I read on blogs that node can't be run in the browser.
-This meant that I had to comment out the ``module.exports``` in order to get my application to work.
+This meant that I had to comment out the module.exports
+in order to get my application to work.
 ```
 <img width="299" alt="Screen Shot 2019-05-04 at 13 14 48" src="https://user-images.githubusercontent.com/37377831/57179773-4e950d00-6e79-11e9-9fb4-bc03cc3a7a14.png">
 
 ```
-So just incase you decide to run the application and it does not respond to
-the buttons on the UI , check to see if the the modules are being expoerted or commented out. I am hopping to fix this issue in the near future.
+So just in case you decide to run the application and it does not respond to
+the buttons on the UI , check to see if the the modules are being expoerted or commented out. 
+I am hopping to fix this issue in the near future.
 ```
 
 <h4 align='center'>
@@ -130,9 +135,9 @@ Tech Stack Used.
 - JavaScript(ES5 & ES6).
 - Jasmine.
 - HTML 5.
-- CSS3
-- Bootstrap 4
-- jquery
+- CSS3.
+- Bootstrap 4.
+- jquery.
 
 <h4 align='center'>
 What Did I Learn in week 5?
