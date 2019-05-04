@@ -16,6 +16,9 @@
     <div id='display-temperature'>
       <h1 id='currentTemperature'></h1>
     </div>
+    <div class="error-message">
+      <h1 class='badge badge-info' id='show-message'></h1>
+    </div>
   </div>
 
   <div class="container" id='form-holder'>
@@ -34,7 +37,14 @@
             Power Save Mode <span id='generalInfo' class="badge badge-info"></span>
             </li>
             <li>
-             weather <span class="badge badge-dark">Hello</span>
+              <span>Country: </span>
+              <span class="badge badge-dark" id='country'></span>
+              <span>City: </span>
+              <span class="badge badge-dark" id='cityName'></span>
+              <span>Weather: </span>
+              <span class="badge badge-dark" id='wetherDescription'></span>
+              <span>Current Tempearture: </span>
+              <span class="badge badge-danger" id='temperature'></span>
             </li>
           </ul>
       </div>
