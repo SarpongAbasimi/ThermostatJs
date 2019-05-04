@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
   let thermostat = new Thermostat();
+
   (function(){
     if(thermostat.PowerSavingMode == true){
       document.getElementById('powerSaver').style.color = '#FD2026';
@@ -9,12 +10,35 @@ $(document).ready(function(){
     }
   })();
 
+  (()=> {
+    let apiKey ='bba53355256cc5e80941f166b19aa970';
+    let basePath = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    let city = 'London'
+    fetch(`${basePath}${city}&units=metric&appid=${apiKey}`)
+    .then(response => {
+      if(response.ok){
+        return response.json();
+      }
+      throw new Error('Request Failed');
+    },networkError => networkError.message)
+    .then(response => {
+      let country = response.sys['country'];
+      let city = response.name;
+      let weather = response.weather[0]['description'];
+      let currentTemperature = response.main['temp'];
 
-  $('#currentTemperature').html(thermostat.temp);
+      document.getElementById('country').innerHTML = country;
+      document.getElementById('cityName').innerHTML = city;
+      document.getElementById('wetherDescription').innerText = weather;
+      document.getElementById('temperature').innerText = `${currentTemperature}℃`;
+    })
+  })();
+
+  $('#currentTemperature').html(`${thermostat.temp}℃`);
 
   $('#increase').on('click',()=>{
     thermostat.increment()
-    $('#currentTemperature').html(thermostat.temp);
+    $('#currentTemperature').html(`${thermostat.temp}℃`);
     if(thermostat.currentUsage() == 'high-usage'){
       document.getElementById('currentUsage').innerHTML = thermostat.currentUsage();
     };
@@ -58,6 +82,7 @@ $(document).ready(function(){
     thermostat.reset()
     $('#currentTemperature').html(thermostat.temp);
   });
+
   $('#select-city').submit((event)=>{
     event.preventDefault();
     let apiKey ='bba53355256cc5e80941f166b19aa970';
@@ -68,9 +93,8 @@ $(document).ready(function(){
         return(response.json())
       }
       throw new Error('Request failed')
-    }, networkError => networkError .message)
+    }, networkError => networkError.message)
     .then(resjonResponse => {
-      console.log(resjonResponse)
       let country = resjonResponse.sys['country'];
       let city = resjonResponse.name;
       let weather = resjonResponse.weather[0]['description'];
@@ -79,7 +103,7 @@ $(document).ready(function(){
       document.getElementById('country').innerHTML = country;
       document.getElementById('cityName').innerHTML = city;
       document.getElementById('wetherDescription').innerText = weather;
-      document.getElementById('temperature').innerText = currentTemperature;
+      document.getElementById('temperature').innerText = `${currentTemperature}℃`;
     })
   });
 });
