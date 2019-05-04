@@ -70,8 +70,8 @@ Next Step Thermostat Interface.
 </h4>
 
 ```
-This is how the application currently looks, I am really proud of it but at the same time, I am sure it could be inpoved to make it better.
-The application is not currently finished, I have one more user story to complete which I will do in the future.
+This is how the application currently looks, I am really proud of it but at the same time, I am sure it could be improved to make it better.
+The application is not currently finished, I have one more user story to complete,which I will do in the future.
 
 One of the cool things I learned was using ES6 ``fetch`` to request data from an expternal api.
 ```
