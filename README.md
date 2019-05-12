@@ -136,6 +136,8 @@ Tech Stack Used.
 - CSS3.
 - Bootstrap 4.
 - jquery.
+- Express.js
+- Node.js
 
 <h4 align='center'>
 What Did I Learn in week 5?
@@ -148,3 +150,23 @@ What Did I Learn in week 5?
 - Testing using Jasmine.
 - ES6 Fetch.
 - IIFE in JavaScript.
+
+<h4 align='center'>
+Updated On The Application.
+</h4>
+
+> Today, I worked on deploying the application on Heroku. To do this, I had to use Expressjs.
+
+- This meant that I had to make changes to application structure.
+
+<img width="958" alt="Screen Shot 2019-05-12 at 20 51 44" src="https://user-images.githubusercontent.com/37377831/57587134-dcb36800-74f7-11e9-86a6-03f11a5f9299.png">
+
+> What I learnt from deploying the app on Heroku.
+
+```
+I learnt that the openweather API only serves through http and not https, therefore the app was not getting anything back when it was making request for to openweather.
+
+To solve this issue, I had to use other services provided by heruko to
+make the request for me. [Click here](https://cors-anywhere.herokuapp.com) to find out more.
+```
+- I had to put ``https://cors-anywhere.herokuapp.com/'`` in front of my API key.
