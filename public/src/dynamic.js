@@ -11,7 +11,7 @@ $(document).ready(function(){
   })();
 
   (()=> {
-    let apiKey = 'bba53355256cc5e80941f166b19aa970'
+    let apiKey = 'bba53355256cc5e80941f166b19aa970';
     let basePath = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=';
     let city = 'London'
     fetch(`${basePath}${city}&units=metric&appid=${apiKey}`)
@@ -87,7 +87,8 @@ $(document).ready(function(){
     event.preventDefault();
     let apiKey ='bba53355256cc5e80941f166b19aa970';
     let userInput = $('#userQuery').val();
-    fetch(`https://peaceful-springs-37224.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=${apiKey}`)
+    let herokuappApiCall = 'https://cors-anywhere.herokuapp.com/';
+    fetch(`${herokuappApiCall}http://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=metric&appid=${apiKey}`)
     .then((response)=>{
       if(response.ok){
         return(response.json())
