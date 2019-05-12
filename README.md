@@ -164,7 +164,7 @@ Updated On The Application.
 > What I learnt from deploying the app on Heroku.
 
 ```
-I learnt that the openweather API only serves through http and not https, therefore the app was not getting anything back when it was making request for to openweather.
+I learnt that the openweather API only serves through http and not https. This meant that the app was not getting anything back when it was making request for to openweather.
 
 To solve this issue, I had to use other services provided by heruko to
 make the request for me. [Click here](https://cors-anywhere.herokuapp.com) to find out more.
