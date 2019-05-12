@@ -1,5 +1,5 @@
 
-var Thermostat = require('../src/thermostat');
+var Thermostat = require('../public/src/thermostat');
 
 describe('Thermostat', function(){
   var thermostat;
